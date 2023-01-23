@@ -47,14 +47,13 @@ with open(sys.argv[1], encoding='utf-8-sig') as csv_file:
         csv_writer.writeheader()
         for row in csv_reader:
 
-            print(row)
             if "(Zoom Rooms)" in row["Email"] :
-                print("Zoom Rooms Row!")
                 continue
             license = row["License Type"]
             license_object = license_parse(license)
             row.update(license_object)
 
-            print(row)
             csv_writer.writerow(row)
             line_count += 1
+
+    print("Output {} lines!".format(line_count))
