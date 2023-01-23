@@ -1,5 +1,5 @@
 # zoom-csv-convert
-a python script to make an exported user CSV importable by Zoom.
+a python script to make an exported user CSV importable by the Zoom Admin interface
 
 run with python3 main.py inputfile outputfile 
 
